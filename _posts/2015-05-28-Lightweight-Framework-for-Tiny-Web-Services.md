@@ -1,18 +1,21 @@
-= Lightweight Framework for Tiny Web Services
-:published_at: 2015-05-28
-:hp-tags: Framework, Java, Lightweight, REST, Service, Web
-
+---
+layout      : post
+title       : Lightweight Framework for Tiny Web Services
+description : Introducing a small open source library for writing web services
+headline    : AGE OF JAVA
+category    : other
+modified    : 2015-05-28
+tags        : [Framework, Java, Lightweight, REST, Service, Web]
+---
 
 Some while ago I was sitting on the train with my laptop, half-heartedly coding on some minor side project to make the time pass a little bit faster. I have honestly forgotten what the project was about, but I remember thinking that it would have been so much easier to get a prototype up if I didn't have to mess with all the server mumbo-jumbo.
 
-I usually write most of my web projects on top of https://github.com/NanoHttpd/nanohttpd[NanoHttpd] since it is lightweight and is easy to get started with, but after a while I started fantasize about how it could be _even easier_ to use. That was what led me to create https://github.com/Pyknic/ServiceKit[ServiceKit].
+I usually write most of my web projects on top of [NanoHttpd](https://github.com/NanoHttpd/nanohttpd) since it is lightweight and is easy to get started with, but after a while I started fantasize about how it could be _even easier_ to use. That was what led me to create [ServiceKit](https://github.com/Pyknic/ServiceKit).
 
 Imagine you are creating a web app that users can communicate with using a REST api. You have two commands, "register" and "login". They both take an username and a password and should return a status of whether the operation succeeded. The code might look something like this:
 
-[[app-listing]]
-[source,java]
-.LoginProject.java
-----
+###### LoginProject.java
+```java
 public final class LoginProject extends NanoHTTPD {
 
     @Override
@@ -73,14 +76,12 @@ public final class LoginProject extends NanoHTTPD {
         super (1337);
     }
 }
-----
+```
 
 With service kit, the code could be reduced significantly by using annotations to declare new services and automatically parsing in- and output to JSON.
 
-[[app-listing]]
-[source,java]
-.LoginProject.java
-----
+###### LoginProject.java
+```java
 public final class LoginProject extends HttpServer {
     
     @Service({"username", "password"})
@@ -129,15 +130,16 @@ public final class LoginProject extends HttpServer {
         super (1337);
     }
 }
-----
+```
 
-ServiceKit uses the https://github.com/google/gson[Googles GSON project] for the parsing so no specific interface is required to serialize and deserialize the parameters. That makes the code more readable and prevents bugs related to malformed results etc.
+ServiceKit uses the [Googles GSON project](https://github.com/google/gson) for the parsing so no specific interface is required to serialize and deserialize the parameters. That makes the code more readable and prevents bugs related to malformed results etc.
 
 The example above will give you two commands accessible over HTTP like this:
 
- http://example.com/login?username=YourName&password=YourPassword
- http://example.com/register?username=YourName&password=YourPassword
+> http://example.com/login?username=YourName&password=YourPassword
 
-The source code for ServiceKit https://github.com/Pyknic/ServiceKit[is available here on GitHub]! 
+> http://example.com/register?username=YourName&password=YourPassword
+
+The source code for ServiceKit [is available here on GitHub](https://github.com/Pyknic/ServiceKit)! 
 
 Let me know what you think about this approach!
