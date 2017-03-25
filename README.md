@@ -1,2 +1,2 @@
-# website
-The repository for the Age of Java blog
+# Age of Java
+Thoughts and Ideas Related to Java Programming written by Emil Forslund, professional Code Monkey.
