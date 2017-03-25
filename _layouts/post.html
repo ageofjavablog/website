@@ -59,7 +59,7 @@ Description: Awesome dude, awesome life
             <div class="notepad-post-title bg-check">
                 <h1>{{ page.title }}</h1>
                 <p>by <strong>{{ site.owner.name }}</strong> &#8212; <strong><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %b %Y" }}</time></strong></p>
-                {% assign tagsize = page.tags.size %}{% if tagsize != 0 %}<p>Tagged {% for tag in page.tags %}<a href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}" data-toggle="tooltip" title="Posts tagged with {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %}&nbsp;&comma;&nbsp;{% endunless %}{% endfor %}</p>{% endif %} 
+                {% assign tagsize = page.tags.size %}{% if tagsize != 0 %}<p>Tagged {% for tag in page.tags %}<a href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}" data-toggle="tooltip" title="Posts tagged with {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %}&comma;&nbsp;{% endunless %}{% endfor %}</p>{% endif %} 
             </div>
             <div class="bg-img"></div>
         </header>
@@ -71,7 +71,7 @@ Description: Awesome dude, awesome life
                         <div class="notepad-post-meta-simple">
                             <h1>{{ page.title }}</h1>
                             <p>by <strong>{{ site.owner.name }}</strong> &#8212; <strong><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %b %Y" }}</time></strong></p>
-                            {% assign tagsize = page.tags.size %}{% if tagsize != 0 %}<p>Tagged {% for tag in page.tags %}<a href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}" data-toggle="tooltip" title="Posts tagged with {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %}&nbsp;&comma;&nbsp;{% endunless %}{% endfor %}</p>{% endif %}
+                            {% assign tagsize = page.tags.size %}{% if tagsize != 0 %}<p>Tagged {% for tag in page.tags %}<a href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}" data-toggle="tooltip" title="Posts tagged with {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %}&comma;&nbsp;{% endunless %}{% endfor %}</p>{% endif %}
                         </div>
                     </div>
                 </div>
