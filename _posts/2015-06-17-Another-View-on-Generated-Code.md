@@ -3,7 +3,7 @@ layout      : post
 title       : Another View on Generated Code
 description : How to generate code in multiple languages automatically using CodeGen
 headline    : AGE OF JAVA
-category    : projects
+category    : java
 modified    : 2015-06-17
 tags        : [Automatic Programming, Generator, Java, Languages, Speedment, XML]
 ---

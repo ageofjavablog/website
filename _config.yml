@@ -111,20 +111,14 @@ prose:
           element: "multiselect"
           label: "Add categories"
           placeholder: "Choose categories"
-          value: personal
+          value: java
           options:
-            - name: "Personal"
-              value: personal
-            - name: "Engineering"
-              value: engineering
-            - name: "Physics"
-              value: physics
-            - name: "Psychology"
-              value: psychology
-            - name: "Interesting"
-              value: interesting
-            - name: "Web-Development"
-              value: webdevelopment
+            - name: "Java"
+              value: java
+            - name: "Web"
+              value: web
+            - name: "Other"
+              value: other
           alterable: true
       - name: "tags"
         field:

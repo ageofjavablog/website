@@ -3,7 +3,7 @@ layout      : post
 title       : Object-Oriented Approach to Code Generation
 description : Introducing CodeGen, an MVC-oriented Code Generator for Java
 headline    : AGE OF JAVA
-category    : projects
+category    : java
 modified    : 2015-06-02
 tags        : [Automatic Programming, CodeGen, Generation, Java, Speedment]
 ---

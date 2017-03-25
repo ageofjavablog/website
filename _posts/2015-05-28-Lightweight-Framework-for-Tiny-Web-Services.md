@@ -3,7 +3,7 @@ layout      : post
 title       : Lightweight Framework for Tiny Web Services
 description : Introducing a small open source library for writing web services
 headline    : AGE OF JAVA
-category    : projects
+category    : java
 modified    : 2015-05-28
 tags        : [Framework, Java, Lightweight, REST, Service, Web]
 ---
