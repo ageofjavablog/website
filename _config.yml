@@ -122,9 +122,26 @@ prose:
           alterable: true
       - name: "tags"
         field:
-          element: "text"
-          label: "Tags"
-          placeholder: "Enter tags, separated by spaces"
+          element: "multiselect"
+          label: "Add tags"
+          placeholder: "Choose tags"
+          value: java
+          options:
+            - name: "Java"
+              value: java
+            - name: "Streams"
+              value: streams
+            - name: "Lambda"
+              value: lambda
+            - name: "Spring"
+              value: spring
+            - name: "Tutorial"
+              value: tutorial
+            - name: "Speedment"
+              value: speedment
+            - name: "Java 8"
+              value: java8
+          alterable: true
       - name: "imagefeature"
         field:
           element: "text"
