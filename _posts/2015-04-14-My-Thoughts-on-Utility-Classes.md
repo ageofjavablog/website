@@ -1,6 +1,12 @@
-= My Thoughts on Utility Classes
-:published_at: 2015-04-14
-:hp-tags: Classes, Design, Java, Naming, Programming, Standard, Utility
+---
+layout      : post
+title       : My Thoughts on Utility Classes
+description : An opinion on how to design good utility classes
+headline    : AGE OF JAVA
+category    : other
+modified    : 2015-04-14
+tags        : [Classes, Design, Java, Naming, Programming, Standard, Utility]
+---
 
 Okey, it is time we sat down and had a talk. Yes, I know it is difficult to find the time, but we really need to have this conversation. We need to agree on some rules regarding utility classes in java.
 
