@@ -563,19 +563,19 @@ figcaption {
 .highlight .gs { color: #000000} /* Generic.Strong */
 .highlight .gu { color: #1014AD; font-weight: bold} /* Generic.Subheading */
 .highlight .gt { color: #EB1513; font-weight: bold} /* Generic.Traceback */
-.highlight .kc { color: #F06F00; font-weight: bold} /* Keyword.Constant */
-.highlight .kd { color: #F06F00; font-weight: bold} /* Keyword.Declaration */
-.highlight .kn { color: #F06F00; font-weight: bold} /* Keyword.Namespace */
-.highlight .kp { color: #F06F00; font-weight: bold} /* Keyword.Pseudo */
-.highlight .kr { color: #F06F00; font-weight: bold} /* Keyword.Reserved */
-.highlight .kt { color: #8a2be2; text-decoration: underline} /* Keyword.Type */
+.highlight .kc { color: #5382A1; font-weight: bold} /* Keyword.Constant */
+.highlight .kd { color: #5382A1; font-weight: bold} /* Keyword.Declaration */
+.highlight .kn { color: #5382A1; font-weight: bold} /* Keyword.Namespace */
+.highlight .kp { color: #5382A1; font-weight: bold} /* Keyword.Pseudo */
+.highlight .kr { color: #5382A1; font-weight: bold} /* Keyword.Reserved */
+.highlight .kt { color: #8a2be2;} /* Keyword.Type */
 .highlight .ld { color: #000000} /* Literal.Date */
-.highlight .m { color: #00C226; text-decoration: underline} /* Literal.Number */
+.highlight .m { color: #00C226;} /* Literal.Number */
 .highlight .s { color: #000000} /* Literal.String */
 .highlight .na { color: #000000} /* Name.Attribute */
 .highlight .nb { color: #000000} /* Name.Builtin */
 .highlight .nc { color: #000000} /* Name.Class */
-.highlight .no { color: #B91F49; text-decoration: underline} /* Name.Constant */
+.highlight .no { color: #B91F49;} /* Name.Constant */
 .highlight .nd { color: #000000} /* Name.Decorator */
 .highlight .ni { color: #ee0000; font-weight: bold} /* Name.Entity */
 .highlight .ne { color: #000000} /* Name.Exception */
@@ -584,14 +584,14 @@ figcaption {
 .highlight .nn { color: #000000} /* Name.Namespace */
 .highlight .nx { color: #000000} /* Name.Other */
 .highlight .py { color: #000000} /* Name.Property */
-.highlight .nt { color: #F06F00; font-weight: bold} /* Name.Tag */
-.highlight .nv { color: #8a2be2; text-decoration: underline} /* Name.Variable */
+.highlight .nt { color: #5382A1; font-weight: bold} /* Name.Tag */
+.highlight .nv { color: #8a2be2;} /* Name.Variable */
 .highlight .ow { color: #000000} /* Operator.Word */
 .highlight .w { color: #000000} /* Text.Whitespace */
-.highlight .mf { color: #00C226; text-decoration: underline} /* Literal.Number.Float */
-.highlight .mh { color: #00C226; text-decoration: underline} /* Literal.Number.Hex */
-.highlight .mi { color: #00C226; text-decoration: underline} /* Literal.Number.Integer */
-.highlight .mo { color: #00C226; text-decoration: underline} /* Literal.Number.Oct */
+.highlight .mf { color: #00C226;} /* Literal.Number.Float */
+.highlight .mh { color: #00C226;} /* Literal.Number.Hex */
+.highlight .mi { color: #00C226;} /* Literal.Number.Integer */
+.highlight .mo { color: #00C226;} /* Literal.Number.Oct */
 .highlight .sb { color: #000000} /* Literal.String.Backtick */
 .highlight .sc { color: #000000} /* Literal.String.Char */
 .highlight .sd { color: #000000} /* Literal.String.Doc */
@@ -604,10 +604,10 @@ figcaption {
 .highlight .s1 { color: #000000} /* Literal.String.Single */
 .highlight .ss { color: #000000} /* Literal.String.Symbol */
 .highlight .bp { color: #000000} /* Name.Builtin.Pseudo */
-.highlight .vc { color: #8a2be2; text-decoration: underline} /* Name.Variable.Class */
-.highlight .vg { color: #8a2be2; text-decoration: underline} /* Name.Variable.Global */
-.highlight .vi { color: #8a2be2; text-decoration: underline} /* Name.Variable.Instance */
-.highlight .il { color: #00C226; text-decoration: underline} /* Literal.Number.Integer.Long */
+.highlight .vc { color: #8a2be2;} /* Name.Variable.Class */
+.highlight .vg { color: #8a2be2;} /* Name.Variable.Global */
+.highlight .vi { color: #8a2be2;} /* Name.Variable.Instance */
+.highlight .il { color: #00C226;} /* Literal.Number.Integer.Long */
 .chart {
   max-width: 56.250rem;
   margin-right: auto;
