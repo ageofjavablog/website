@@ -3,7 +3,7 @@ layout      : post
 title       : My Thoughts on Utility Classes
 description : An opinion on how to design good utility classes
 headline    : AGE OF JAVA
-category    : other
+category    : java
 modified    : 2015-04-14
 tags        : [Classes, Design, Java, Naming, Programming, Standard, Utility]
 ---
