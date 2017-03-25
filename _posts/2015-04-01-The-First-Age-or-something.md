@@ -1,6 +1,12 @@
-= The First Age... or something
-:published_at: 2015-04-01
-:hp-tags: Java, Programming
+---
+layout      : post
+title       : The First Age... or something
+description : Short introduction to the blog
+headline    : AGE OF JAVA
+category    : other
+modified    : 2015-04-01
+tags        : [Java, Programming]
+---
 
 Hello, mysterious internet community! I come in peace!
 
