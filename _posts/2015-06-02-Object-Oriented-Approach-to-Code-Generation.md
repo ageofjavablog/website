@@ -1,7 +1,7 @@
 ---
 layout      : post
 title       : Object-Oriented Approach to Code Generation
-description : Introducing a small open source library for writing web services
+description : Introducing CodeGen, an MVC-oriented Code Generator for Java
 headline    : AGE OF JAVA
 category    : projects
 modified    : 2015-06-02
