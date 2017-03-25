@@ -1,15 +1,20 @@
-= Object-Oriented Approach to Code Generation
-:published_at: 2015-06-02
-:hp-tags: Automatic Programming, Code, CodeGen, Generation, Java
-:source-highlighter: pygments
+---
+layout      : post
+title       : Object-Oriented Approach to Code Generation
+description : Introducing a small open source library for writing web services
+headline    : AGE OF JAVA
+category    : projects
+modified    : 2015-06-02
+tags        : [Automatic Programming, CodeGen, Generation, Java, Speedment]
+---
 
-Code Generation is a common way to reduce the unhealthy load of boring tasks often put on us eager code grunts. Many code generation frameworks I have seen use a template-replace-repeat approach where you write a template for how the generated code file should look and then replace certain keywords and repeat other sections to produce the specific file you want.
+Code Generation is a common way to reduce the unhealthy load of boring tasks often put on us eager code monkeys. Many code generation frameworks I have seen use a template-replace-repeat approach where you write a template for how the generated code file should look and then replace certain keywords and repeat other sections to produce the specific file you want.
 
-A problem with this approach that annoys me is that it is really difficult to know if the generated code will work or not until you compile it. You might have changed the name of one class and suddenly the generated code won't build. To handle this issue https://github.com/Pyknic/CodeGen[I started a project called CodeGen] that aim to be completely object-oriented so that you can benefit from type-safety all the way from template to executable code. The main user case for the generator is the https://github.com/speedment/speedment[Speedment software], but it can be used in a variety of projects.
+A problem with this approach that annoys me is that it is really difficult to know if the generated code will work or not until you compile it. You might have changed the name of one class and suddenly the generated code won't build. To handle this issue [I started a project called CodeGen](https://github.com/Pyknic/CodeGen) that aim to be completely object-oriented so that you can benefit from type-safety all the way from template to executable code. The main user case for the generator is the [Speedment software](https://github.com/speedment/speedment), but it can be used in a variety of projects.
 
 Consider the following code:
 
-
+```java
 final Generator generator = new JavaGenerator();
 
 final File file = File.of("org/example/Foo.java")
@@ -24,17 +29,20 @@ final File file = File.of("org/example/Foo.java")
     .call(new AutoJavadoc())
     .call(new AutoImports(generator))
 ;
+```
 
 The model tree of the application is built using beans. New methods and member variables can be added to the tree to create variants of the same class.
 
 When the code is to be rendered it can easily be passed to a generator class.
 
-
+```java
 String code = generator.on(file).get();
-</pre>
-<br />
-The generated code will look like the following:<br />
-<pre name="code" class="java">/**
+```
+
+The generated code will look like the following:
+
+```java
+/**
  * Write some documentation here.
  */
 package org.example;
@@ -154,8 +162,8 @@ public class Foo {
             .isPresent();
     }
 } 
-</pre>
-<br />
-Every component is implemented as a Interface-Class pair so that you can change the implementation dynamically without rewriting other parts of the system.<br />
-<br />
+```
+
+Every component is implemented as a `interface`-`class` pair so that you can change the implementation dynamically without rewriting other parts of the system.
+
 Hopefully this will be helpful for other people!
