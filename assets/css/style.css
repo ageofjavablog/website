@@ -571,7 +571,7 @@ figcaption {
 .highlight .kt { color: #5382A1;} /* Keyword.Type */
 .highlight .ld { color: #000000} /* Literal.Date */
 .highlight .m { color: #00C226;} /* Literal.Number */
-.highlight .s { color: #000000} /* Literal.String */
+.highlight .s { color: #F89820} /* Literal.String */
 .highlight .na { color: #000000} /* Name.Attribute */
 .highlight .nb { color: #000000} /* Name.Builtin */
 .highlight .nc { color: #000000} /* Name.Class */
