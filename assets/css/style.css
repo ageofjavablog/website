@@ -568,7 +568,7 @@ figcaption {
 .highlight .kn { color: #5382A1; font-weight: bold} /* Keyword.Namespace */
 .highlight .kp { color: #5382A1; font-weight: bold} /* Keyword.Pseudo */
 .highlight .kr { color: #5382A1; font-weight: bold} /* Keyword.Reserved */
-.highlight .kt { color: #8a2be2;} /* Keyword.Type */
+.highlight .kt { color: #5382A1;} /* Keyword.Type */
 .highlight .ld { color: #000000} /* Literal.Date */
 .highlight .m { color: #00C226;} /* Literal.Number */
 .highlight .s { color: #000000} /* Literal.String */
