@@ -1,19 +1,25 @@
-= Another View on Generated Code
-:published_at: 2015-06-17
-:hp-tags: Automatic Programming, Code, Generator, Java, Languages, Multiple, Speedment, XML
-:source-highlighter: pygments
+---
+layout      : post
+title       : Another View on Generated Code
+description : How to generate code in multiple languages automatically using CodeGen
+headline    : AGE OF JAVA
+category    : projects
+modified    : 2015-06-17
+tags        : [Automatic Programming, Generator, Java, Languages, Speedment, XML]
+---
 
-This is https://pyknic.github.io/2015/06/02/Object-Oriented-Approach-to-Code-Generation.html[a follow-up on my last article regarding CodeGen], the https://github.com/Pyknic/CodeGen[object-oriented code generator for java].
+This is a follow-up on [my last article](https://ageofjavablog.github.io/website/Object-Oriented-Approach-to-Code-Generation) regarding CodeGen, the [MVC-oriented code generator for java](https://github.com/Pyknic/CodeGen).
 
 One of the advantages of the modular approach demonstrated there is that multiple views can be attached to the same generator. By using different "factories", the rendering can go through the same pipeline and still be divided into different contexts.
 
-In this example, we will render the same "concat-method" model using two different installers. One is the standard java-installer and one is an example XML-installer.
+In this example, we will render the same "concat-method" model using two different installers. One is the standard Java-installer and one is an example XML-installer.
 
 The `XMLInstaller` will have two additional views, `MethodXMLView` and `FieldXMLView`. Those views will use some of the Java-views (like `TypeView`) since a type looks the same in both contexts.
 
-[]
-.Main.java
-<pre name="code" class="java">public class Main {
+
+###### Main.java
+```java
+public class Main {
     private final static TransformFactory 
         XML = new DefaultTransformFactory("XMLTransformFactory")
             .install(Method.class, MethodXMLView.class)
@@ -37,38 +43,47 @@ The `XMLInstaller` will have two additional views, `MethodXMLView` and `FieldXML
             System.out.println(code.getText());
         });
     }
-}</pre>
-<h4>MethodXMLView.java</h4>
-<pre name="code" class="java">public class MethodXMLView implements Transform&lt;Method, String&gt; {
+}
+```
+
+###### MethodXMLView.java
+```java
+public class MethodXMLView implements Transform<Method, String> {
     @Override
-    public Optional&lt;String&gt; render(Generator gen, Method model) {
+    public Optional<String> render(Generator gen, Method model) {
         return Optional.of(
-            "&lt;method name=\"" + model.getName() + "\" type=\"" + 
-            gen.on(model.getType()).get() + "\"&gt;" + nl() + indent(
-                "&lt;params&gt;" + nl() + indent(
+            "<method name=\"" + model.getName() + "\" type=\"" + 
+            gen.on(model.getType()).get() + "\">" + nl() + indent(
+                "<params>" + nl() + indent(
                     gen.metaOn(model.getFields())
-                        .filter(c -&gt; XML.equals(c.getFactory()))
-                        .map(c -&gt; c.getText())
+                        .filter(c -> XML.equals(c.getFactory()))
+                        .map(c -> c.getText())
                         .collect(Collectors.joining(nl()))
-                ) + nl() + "&lt;/params&gt;" + nl() +
-                "&lt;code&gt;" + nl() + indent(
+                ) + nl() + "</params>" + nl() +
+                "<code>" + nl() + indent(
                     model.getCode().stream().collect(Collectors.joining(nl()))
-                ) + nl() + "&lt;/code&gt;"
-            ) + nl() + "&lt;/methods&gt;"
+                ) + nl() + "</code>"
+            ) + nl() + "</methods>"
         );
     }
-}</pre>
-<h4>FieldXMLView.java</h4>
-<pre name="code" class="java">public class FieldXMLView implements Transform&lt;Field, String&gt; {
+}
+```
+
+###### FieldXMLView.java
+```java
+public class FieldXMLView implements Transform<Field, String> {
     @Override
-    public Optional&lt;String&gt; render(Generator gen, Field model) {
-        return Optional.of("&lt;field name=\"" + model.getName() + "\" /&gt;");
+    public Optional<String> render(Generator gen, Field model) {
+        return Optional.of("<field name=\"" + model.getName() + "\" />");
     }
-}</pre>
-<h4>Results</h4>
-When the application above is executed, the following will be outputed:<br />
-<br />
-<pre>-------------------------------------
+}
+```
+
+### Results
+When the application above is executed, the following will be outputed:
+
+```
+-------------------------------------
   JavaTransformFactory:
 -------------------------------------
 public String concat(String str1, String str2) {
@@ -77,14 +92,15 @@ public String concat(String str1, String str2) {
 -------------------------------------
   XMLTransformFactory:
 -------------------------------------
-&lt;method name="concat" type="java.lang.String"&gt;
-    &lt;params&gt;
-        &lt;field name="str1" /&gt;
-        &lt;field name="str2" /&gt;
-    &lt;/params&gt;
-    &lt;code&gt;
+<method name="concat" type="java.lang.String">
+    <params>
+        <field name="str1" />
+        <field name="str2" />
+    </params>
+    <code>
         return str1 + str2;
-    &lt;/code&gt;
-&lt;/methods&gt;</pre>
-<br />
+    </code>
+</methods>
+```
+
 The same model is rendered in two different languages using the same rendering pipeline.
