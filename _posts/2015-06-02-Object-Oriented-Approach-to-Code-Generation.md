@@ -6,6 +6,7 @@ headline    : AGE OF JAVA
 category    : java
 modified    : 2015-06-02
 tags        : [Automatic Programming, CodeGen, Generation, Java, Speedment]
+featured    : true
 ---
 
 Code Generation is a common way to reduce the unhealthy load of boring tasks often put on us eager code monkeys. Many code generation frameworks I have seen use a template-replace-repeat approach where you write a template for how the generated code file should look and then replace certain keywords and repeat other sections to produce the specific file you want.
