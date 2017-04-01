@@ -10,11 +10,7 @@ tags        : [API, Database, Java, Java 8, Lambda, Queries, Speedment, SQL, Str
 
 When Java 8 was released and people began streaming over all kinds of stuff, it didn’t take long before they started imagining how great it would be if you could work with your databases in the same way. Essentially relational databases are made up of huge chunks of data organized in table-like structures. These structures are ideal for filtering and mapping operations, as can be seen in the `SELECT`, `WHERE` and `AS` statements of the SQL language.
 
-<img src="/website/images/2015-12-04/Moonwalk.gif" style="float:right;max-width:320px;" alt="Spire and Duke does the moonwalk." />
-
-What people did at first (me included) was to ask the database for a large set of data and then process that data using the new cool Java 8-streams.
-
-The problem that quickly arose was that the latency alone of moving all the rows from the database to the memory took too much time. The result was that there was not much gain left from working with the data in-memory. Even if you could do really freaking advanced stuff with the new Java 8-tools, the greatness didn’t really apply to database applications because of the performance overhead.
+What people did at first (me included) was to ask the database for a large set of data and then process that data using the new cool Java 8-streams. The problem that quickly arose was that the latency alone of moving all the rows from the database to the memory took too much time. The result was that there was not much gain left from working with the data in-memory. Even if you could do really freaking advanced stuff with the new Java 8-tools, the greatness didn’t really apply to database applications because of the performance overhead.
 
 When I began committing to the [Speedment Open Source](https://github.com/speedment/speedment) project, we soon realized the potential in using databases the Java 8-way, but we really needed a smart way of handling this performance issue. In this article I will show you how we solved this using a custom delegator for the Stream API to manipulate a stream in the background, optimizing the resulting SQL queries.
 
