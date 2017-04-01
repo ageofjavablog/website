@@ -8,9 +8,11 @@ modified    : 2015-12-04
 tags        : [API, Database, Java, Java 8, Lambda, Queries, Speedment, SQL, Stream]
 ---
 
-<img src="/website/images/2015-12-04/Moonwalk.gif" alt="Spire and Duke does the moonwalk." />
+When Java 8 was released and people began streaming over all kinds of stuff, it didn’t take long before they started imagining how great it would be if you could work with your databases in the same way. Essentially relational databases are made up of huge chunks of data organized in table-like structures. These structures are ideal for filtering and mapping operations, as can be seen in the `SELECT`, `WHERE` and `AS` statements of the SQL language.
 
-When Java 8 was released and people began streaming over all kinds of stuff, it didn’t take long before they started imagining how great it would be if you could work with your databases in the same way. Essentially relational databases are made up of huge chunks of data organized in table-like structures. These structures are ideal for filtering and mapping operations, as can be seen in the `SELECT`, `WHERE` and `AS` statements of the SQL language. What people did at first (me included) was to ask the database for a large set of data and then process that data using the new cool Java 8-streams.
+<img src="/website/images/2015-12-04/Moonwalk.gif" style="float:right;max-width:320px;" alt="Spire and Duke does the moonwalk." />
+
+What people did at first (me included) was to ask the database for a large set of data and then process that data using the new cool Java 8-streams.
 
 The problem that quickly arose was that the latency alone of moving all the rows from the database to the memory took too much time. The result was that there was not much gain left from working with the data in-memory. Even if you could do really freaking advanced stuff with the new Java 8-tools, the greatness didn’t really apply to database applications because of the performance overhead.
 
