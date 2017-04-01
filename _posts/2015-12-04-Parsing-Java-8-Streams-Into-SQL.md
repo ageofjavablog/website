@@ -6,6 +6,7 @@ headline    : AGE OF JAVA
 category    : java
 modified    : 2015-12-04
 tags        : [API, Database, Java, Java 8, Lambda, Queries, Speedment, SQL, Stream]
+featured    : true
 ---
 
 When Java 8 was released and people began streaming over all kinds of stuff, it didn’t take long before they started imagining how great it would be if you could work with your databases in the same way. Essentially relational databases are made up of huge chunks of data organized in table-like structures. These structures are ideal for filtering and mapping operations, as can be seen in the `SELECT`, `WHERE` and `AS` statements of the SQL language.
