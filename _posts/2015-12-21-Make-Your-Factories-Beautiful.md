@@ -9,7 +9,9 @@ tags        : [API, Design, Java, Java 8, Lambda, Speedment, Stream]
 featured    : false
 ---
 
-Every java programmer worth the name knows about the [Factory Pattern](https://en.wikipedia.org/wiki/Factory_method_pattern). It is a convenient and standardized way to reduce coupling by teaching a component how to fish rather than giving it to them. When working with large systems the pattern does however add a lot of boilerplate code to the system. For every entity you need a number of different factories for producing different implementations of that entity, which is both tiresome and unnecessary to write. This is only one of many new patterns that we [have come to use at Speedment](https://github.com/speedment/speedment).
+Every java programmer worth the name knows about the [Factory Pattern](https://en.wikipedia.org/wiki/Factory_method_pattern). It is a convenient and standardized way to reduce coupling by teaching a component how to fish rather than giving it to them.
+
+When working with large systems the pattern does however add a lot of boilerplate code to the system. For every entity you need a number of different factories for producing different implementations of that entity, which is both tiresome and unnecessary to write. This is only one of many new patterns that we [have come to use at Speedment](https://github.com/speedment/speedment).
 
 Here is a typical example where you want a car trader to be able to create instances of the `Car` interface without knowing the exact implementation.
 

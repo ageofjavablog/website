@@ -9,6 +9,8 @@ tags        : [Beautiful, Collections, Java, Java 8, Lambda, Maps, Programming, 
 featured    : true
 ---
 
+In Java 8 it is extremely easy to stream over lists and sets, but it is not as easy to stream over maps.
+
 In this article I will show you how [Speedment Open Source](http://speedment.org) streams efficiently over standard Java maps, expanding the `Stream` interface into something called a `MapStream`! This addition will make it easier to keep your streams concrete and readable even in complex scenarios. Hopefully this will allow you to keep streaming without prematurely collecting the result.
 
 One of the largest features in Java 8 was the ability to stream over collections of objects. By adding the `.stream()`-method into the `Collection` interface, every collection in the java language was suddenly expanded with this new ability. Other data structures like the `Map`-interface, does not implement the method as they are not strictly speaking collections.
