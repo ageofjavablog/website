@@ -9,9 +9,7 @@ tags        : [Architecture, Design, Dynamic, Java, Java 8, Objects, Pattern, Pr
 featured    : false
 ---
 
-How do you organize your objects? In this article I will introduce a pattern for organizing so called noun-classes in your system in a untyped way and then expose typed views of your data using traits.
-
-This makes it possible to get the flexibility of an untyped language like JavaScript in a typed language like Java, with only a small sacrifice.
+How do you organize your objects? In this article I will introduce a pattern for organizing so called noun-classes in your system in a untyped way and then expose typed views of your data using traits. This makes it possible to get the flexibility of an untyped language like JavaScript in a typed language like Java, with only a small sacrifice.
 
 <img src="/website/images/2016-01-15/narnia.png" alt="Spire and Duke looking through the door to the JavaScript world" />
 
