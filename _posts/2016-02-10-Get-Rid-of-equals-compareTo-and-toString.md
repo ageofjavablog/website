@@ -1,6 +1,6 @@
 ---
 layout      : post
-title       : Get rid of equals, compareTo and toString
+title       : Get rid of equals, compare_To and to_String
 description : An approach to object-oriented design in Java that makes code more maintainable by not overriding equals and compareTo.
 headline    : AGE OF JAVA
 category    : java
