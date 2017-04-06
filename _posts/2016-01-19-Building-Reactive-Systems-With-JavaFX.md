@@ -11,7 +11,7 @@ featured    : true
 
 JavaFX is the new standard library for building graphical applications in Java, but many programmers out there is still stuck with Swing or even (tremble) AWT.
 
-<img src="/website/images/2016-01-19/javafx.png" alt="Spire and Duke looking through the door to the JavaScript world" />
+<img src="/website/images/2016-01-19/javafx.png" alt="Various Features of JavaFX" />
 
 A lot has happened in the 20 years java has been around. When I began looking into the JavaFX libraries two years ago [for the Speedment UI](https://github.com/speedment/speedment) I found many things fascinating! Here are a few tips on how you can use many of the new awesome features in the JavaFX toolkit to build reactive and fast applications!
 
