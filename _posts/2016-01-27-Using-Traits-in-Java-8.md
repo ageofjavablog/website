@@ -56,4 +56,4 @@ livingBeings.stream()
 
 Using the and-character (`&`) we can cast instances that implement all the required traits into a dynamic type, without them sharing an ancestor.
 
-Was this interesting? In [the following article](https://ageofjava.blogspot.com/2016/02/definition-of-trait-pattern-in-java.html) I present a more formal definition of the Trait Pattern in java.
+Was this interesting? In [the following article](/website/java/Using-Traits-in-Java-8) I present a more formal definition of the Trait Pattern in java.
