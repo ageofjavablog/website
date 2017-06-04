@@ -1,6 +1,6 @@
 ---
 layout      : post
-title       : How To: Insert and Read From a Database using Json
+title       : How To - Insert and Read From a Database using Json
 description : Use Speedment to generate Gson TypeAdapters for converting JSON objects to and from rows in a SQL database.
 headline    : AGE OF JAVA
 category    : java
