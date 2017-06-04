@@ -13,7 +13,7 @@ Most applications written in Java require some form of data storage. In small ap
 
 ### What is Speedment?
 
-![](https://1.bp.blogspot.com/-mE0IVu3Z7Dk/Vwg4lFJx4PI/AAAAAAAAEvw/x_aDWWzgknM6WA7AcPezNzi3lAYnenGpQ/s320/Hello-Speedment.png)](https://1.bp.blogspot.com/-mE0IVu3Z7Dk/Vwg4lFJx4PI/AAAAAAAAEvw/x_aDWWzgknM6WA7AcPezNzi3lAYnenGpQ/s1600/Hello-Speedment.png)
+![](https://1.bp.blogspot.com/-mE0IVu3Z7Dk/Vwg4lFJx4PI/AAAAAAAAEvw/x_aDWWzgknM6WA7AcPezNzi3lAYnenGpQ/s320/Hello-Speedment.png)
 
 Speedment is a developer tool that generates java classes from your SQL metadata. The generated code handles everything from setting up a connection to data retrieval and persistence. The system is designed to integrate perfectly with the Java 8 Stream API so that you can query your database using lambdas without a single line of SQL. The created streams are [optimized in the background](https://dzone.com/articles/parsing-java-8-streams-into-sql) to reduce the network load.
 
