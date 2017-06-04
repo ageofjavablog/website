@@ -16,8 +16,7 @@ Speedment is a code generation tool for java that connects to a database and use
 ![Spire and Duke downloading stuff from a database](https://lh5.googleusercontent.com/L62CgdVcpG0O0aC6u1BiY-HXy_9y08-oZ337B5ZjaWh4t2RJQwz6cEARAxlhN9ZC8hFwepJngXNg9EvNs3t6MHt8hR34LQy3B1EsbK4HfvuLnrdCON82Pm5H1De9t8U8DUUzj8SN)
 
 ### Step 1: Creating the Plugin Project
-
-[In a previous article](http://www.ageofjava.com/2016/04/how-to-generate-customized-java-8-code.html) I went into detail on how to create a new plugin for Speedment, so here is the short version. Create a new maven project and set Speedment and Gson as dependencies.
+[In a previous article](/java/Generate-Customized-Code-With-Plugins) I went into detail on how to create a new plugin for Speedment, so here is the short version. Create a new maven project and set Speedment and Gson as dependencies.
 
 ###### pom.xml
 
