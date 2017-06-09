@@ -11,11 +11,11 @@ featured    : false
 
 How do you organize your objects? In this article I will introduce a pattern for organizing so called noun-classes in your system in a untyped way and then expose typed views of your data using traits. This makes it possible to get the flexibility of an untyped language like JavaScript in a typed language like Java, with only a small sacrifice.
 
-<img src="/website/images/2016-01-15/narnia.png" alt="Spire and Duke looking through the door to the JavaScript world" />
+<img src="/images/2016-01-15/narnia.png" alt="Spire and Duke looking through the door to the JavaScript world" />
 
 Every configuration the user does in your UI, every selection in a form need to be stored someplace accessible from your application. It needs to be stored in a format that can be operated on. The school-book example of this would be to define classes for every noun in your system, with getters and setters for the fields that they contain. The somewhat more serious way of doing the school-book model would be to define enterprise beans for every noun and process them using annotations. It might look something like this:
 
-<img src="/website/images/2016-01-15/model.png" alt="Simple object moel with classes Car and Wheel" />
+<img src="/images/2016-01-15/model.png" alt="Simple object moel with classes Car and Wheel" />
 
 There are limitations to these static models. As your system evolves, you will need to add more fields, change the relations between components and maybe create additional implementations for different purposes. You know the story. Suddenly, static components for every noun isn’t as fun anymore. So then you start looking at other developers. How do they solve this? In untyped languages like JavaScript, you can get around this by using Maps. Information about a component can be stored as key-value pairs. If one subsystem need to store an additional field, it can do that, without defining the field beforehand.
 
@@ -27,7 +27,7 @@ myCar.price = 80000; // A new field is defined on-the-fly
 It accelerates development, but at the same time comes with a great cost. You lose type-safety! The nightmare of every true Java developer. It is also more difficult to test and maintain as you have no structure for using the component. In a recent refactor we did at [Speedment](https://github.com/speedment/speedment), we faced these issues of static versus dynamic design and came up with a solution called the [Abstract Document Pattern](https://en.wikipedia.org/wiki/Abstract_Document_Pattern).
 
 ## Abstract Document Pattern
-<img src="/website/images/2016-01-15/pattern.png" alt="Overview of the Abstract Document Pattern" />
+<img src="/images/2016-01-15/pattern.png" alt="Overview of the Abstract Document Pattern" />
 
 A `Document` in this model is similar to a `Map` in JavaScript. It contains a number of key-value pairs where the type of the value is unspecified. On top of this _un-typed_ abstract document is a number of [Traits](https://en.wikipedia.org/wiki/Trait_(computer_programming)), micro-classes that express a specific property of a class. The traits have _typed_ methods for retrieving the specific value they represent. The noun classes are simply a union of different traits on top of an abstract base implementation of the original document interface. This can be done since a class can inherit from multiple interfaces.
 
