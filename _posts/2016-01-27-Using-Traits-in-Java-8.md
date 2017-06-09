@@ -11,7 +11,7 @@ featured    : true
 
 In [one of my earlier articles](/website/java/Type-Safe-Views-using-Abstract-Document-Pattern) I mentioned a programming component called "traits". These constructs have existed [for many years](https://en.wikipedia.org/wiki/Trait_(computer_programming)) in other programming languages like [Scala](http://docs.scala-lang.org/tutorials/tour/traits.html) and [PHP](https://secure.php.net/manual/en/language.oop5.traits.php), but have only recently been available through default methods in Java. I will not go into the possibilities with using traits in this article, but I will show you a neat trick [we use a lot at Speedment](https://github.com/speedment/speedment) that you can use if you ever need to stream over a collection of different objects and separate those that fulfill a number of traits.
 
-<img src="/website/images/2016-01-27/traits.png" alt="Spire and Duke wearing masks" />
+<img src="/images/2016-01-27/traits.png" alt="Spire and Duke wearing masks" />
 
 Say that you have two noun classes Person and Elephant. There is no reason really why persons and elephants should belong to the same super class; elephants are intelligent four-legged creatures and most humans are not. You might still find the two of them in the same computer system and sometimes you even need to store them in the same collection. One way of operating on this collection of various living beings without making them share a common ancestor, (which would totally be just a theory), you can give them similar _traits_.
 
