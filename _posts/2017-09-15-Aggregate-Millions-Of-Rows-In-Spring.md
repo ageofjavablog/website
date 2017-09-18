@@ -11,7 +11,7 @@ featured    : true
 
 The [Spring Framework](https://spring.io/) makes it really easy to quickly setup a RESTful API to a relational database using JPA and Spring Web, as long as the API matches the structure of the database. In many APIs however, the REST-endpoint doesn’t correspond to a particular table but rather an aggregate of the fields. In those cases you still need to write your own REST Controllers, but if the database has millions of rows, then those aggregates might take some time to compute.
 
-![Spire and Duke in Formula 1 Outfits](https://lh5.googleusercontent.com/Ij-lXnRjCzKIHp2dlD7c1TXFzzAI8WE03plUgepEscbKvCZQVfYqxOHMsQgnRkE1dvTp2AArVI-wi781GLlSOroBPBx8bBQF4doxoj0LO8pfutdYOS9ur0nb2CKtXzAkmvcEtQr8)
+![Spire and Duke driving a Formula 1 Car](https://lh5.googleusercontent.com/gtMR6zjtD0CvzduKQoWCY7yXhNZX7ECseCweVsr9_8bMwPr6OfNLLgzDgIrZXilEs3y-yxzF_IbJGc7CCCYxJB4Wqe1kFBjylFCUmf9jCpUvuZ4wTPCCd_Ljow8TlM1Ds11LgkS0)
 
 In this article I will show you how to write a very efficient REST Controller representing a JSON aggregate by using the json-stream plugin in Speedment Enterprise to quickly aggregate large JSON sequences without materializing them on the heap. The demo uses the Enterprise Edition of Speedment, for which you can get a free trial using [the Initializer on the Speedment Website](https://speedment.com/initializer).
 
