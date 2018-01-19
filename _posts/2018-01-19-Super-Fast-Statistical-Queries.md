@@ -5,7 +5,7 @@ description : Calculate mean, variances and correlation coefficients efficiently
 headline    : AGE OF JAVA
 category    : java
 modified    : 2018-01-19
-tags        : [Java, Java 8, Java 9, JShell, JDBC, Query, Speedment, Stream, Tutorial, Statistics, Mean, Variance, Correlation, Coefficient, Pearssons]
+tags        : [Java, Java 8, Java 9, JDBC, Query, Speedment, Stream, Tutorial, Statistics, Mean, Variance, Correlation, Coefficient, Pearssons, In-Memory, Offheap, Performance]
 featured    : false
 ---
 
