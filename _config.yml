@@ -71,8 +71,8 @@ kramdown:
 
 prose:
   rooturl: '_posts'
-  siteurl: 'https://ageofjavablog.github.io/website/'
-  relativeLinks: 'https://ageofjavablog.github.io/website/links.jsonp'
+  siteurl: 'https://ageofjava.com/website/'
+  relativeLinks: 'https://ageofjava.com/website/links.jsonp'
   media: 'images'
   metadata:
     _posts:
